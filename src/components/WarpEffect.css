@@ -1,0 +1,17 @@
+.warp-flash::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0,255,255,0.5) 0%, transparent 80%);
+  animation: warp 0.8s ease-out;
+  z-index: 10;
+  border-radius: 0.75rem;
+  pointer-events: none;
+}
+@keyframes warp {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(5); opacity: 0; }
+}
